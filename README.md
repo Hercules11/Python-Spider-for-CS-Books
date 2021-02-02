@@ -24,6 +24,6 @@
 | 《[Introduction to Probability](https://amzn.to/2r6zQy4)》 | <img src="https://www.doradolist.com/images/Introduction-to-Probability-Dimitri-P-Bertsekas.jpg" width="50%"> | 10 | Stanford, MIT, Berkeley, U of T, Princeton, UCLA, EPFL |
 | 《[Deep Learning](https://amzn.to/2tKqLNd)》 | <img src="https://www.doradolist.com/images/Deep_Learning_Goodfellow.jpg" width="50%"> | 10 | Stanford, U of T, Princeton, Harvard, Oxford, CMU, EPFL |
 
-
+完整榜单，[complete_list.md](https://github.com/Hercules11/Python-Spider-for-CS-Books/blob/master/complete_list.md)
 
 注： `*.db` 可用`DB Browser for SQLite` 打开； 爬取的书籍仅涉及部分领域
