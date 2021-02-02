@@ -1,4 +1,5 @@
 import sqlite3
+import os
 
 universities = ['Stanford', 'MIT', 'Berkeley', 'Caltech', 'U of T', 'Princeton',
                 'Harvard', 'UCLA', 'USC', 'Oxford', 'Cambridge', 'CMU', 'EPFL']
@@ -43,11 +44,18 @@ for book in books:
     else:
         books_data[name] = [text_format(book[1]), text_format(book[2]), [selector(text_format(book[3]), universities)], 1]
 
-print(sorted(books_data.items(), key=lambda kv: (kv[1][-1], kv[0]), reverse=True))
-# [('Elements of Information Theory', 18), ('Pattern Recognition and Machine Learning', 17),
-# ('Introduction to Algorithms', 16), ('The Elements of Statistical Learning', 15),
-# ('Signals and Systems', 13), ('Introduction to the Theory of Computation', 13),
-# ('Speech and Language Processing', 11), ('Wireless Communications', 10),
-# ('Pattern Classification', 10), ('Introduction to Probability', 10), ('Deep Learning', 10),
+
+# 写入完整列表
+if os.path.exists("complete_list.md"):
+    os.remove("complete_list.md")
+
+md_file = open("complete_list.md", 'w', encoding='UTF-8')
+md_file.write("| 书籍 |  | 推荐次数( >= 10) | 用作 推荐教材 的大学 |\n\
+| :----:| :---: | :----: | ------|\n")
+
+for line in sorted(books_data.items(), key=lambda kv: (kv[1][-1], kv[0]), reverse=True):
+    md_file.write(f"| 《[{line[0]}]({line[1][0]})》 | <img src=\"{line[1][1]}\" width=\"50%\"> | {line[1][3]} | {', '.join([el for el in line[1][2] if el is not None])} |\n")
+
 total = sum([num[-1] for num in books_data.values()])
-print(f"合计： {total}")  # 合计： 2345
+md_file.write(f"合计： {total}")  # 合计： 2345
+md_file.close()
