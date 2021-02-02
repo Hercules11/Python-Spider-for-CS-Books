@@ -21,7 +21,7 @@ start = time.time()
 for link in links:
     try:
         req = requests.get(url=link[1], headers=headers)
-        # time.sleep(random.random())
+        time.sleep(random.random())
         cate = link[1][27:-5]
         req.encoding = 'utf-8'
         html = str(req.text).replace('<br>', ' ')
@@ -47,4 +47,3 @@ end = time.time()
 print(f"总用时：{end - start}")
 
 conn.close()
-

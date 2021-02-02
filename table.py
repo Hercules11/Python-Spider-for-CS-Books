@@ -44,7 +44,9 @@ for book in books:
     else:
         books_data[name] = [text_format(book[1]), text_format(book[2]), [selector(text_format(book[3]), universities)], 1]
 
-
+for line in sorted(books_data.items(), key=lambda kv: (kv[1][-1], kv[0]), reverse=True):
+    print(line, '\n')
+print("总计：", len(books_data))
 # 写入完整列表
 if os.path.exists("complete_list.md"):
     os.remove("complete_list.md")
@@ -59,3 +61,5 @@ for line in sorted(books_data.items(), key=lambda kv: (kv[1][-1], kv[0]), revers
 total = sum([num[-1] for num in books_data.values()])
 md_file.write(f"合计： {total}")  # 合计： 2345
 md_file.close()
+
+conn.close()

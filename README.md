@@ -6,7 +6,7 @@
 
 2. 运行 `book_info.py` 获取单本书籍的属性信息
 
-3. 运行 `book_downloader.py` 使用 `IP` 代理池，下载书籍，网站： [Electronic library. Download books free. Finding books (1lib.org)](https://1lib.org/)
+3. 运行 `downloader.py` ~~使用 `IP` 代理池~~~~，下载书籍~~，目前搞不定，手动下载算了，网站： [Electronic library. Download books free. Finding books (1lib.org)](https://1lib.org/)
 
 ------
 

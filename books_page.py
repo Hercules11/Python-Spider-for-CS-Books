@@ -2,8 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import sqlite3
 
-
-# 最终的要存储的书籍内容页
+# 最终的要存储的推荐书籍内容页
 BOOK_PAGE = []
 
 # 符合匹配到关键字的再进行下载
@@ -74,6 +73,7 @@ for el in contentList:
 # print(url_list_subjects) 获得第三层的跳转链接, 从科目达到书籍页面 ['https://www.doradolist.com/ai.html', 'https://www.doradolist.com/algorithms.html',
 # 'https://www.doradolist.com/analog.html', 'https://www.doradolist.com/antennas.html', 'https://www.doradolist.com/biomedical.html',
 # 'https://www.doradolist.com/circuits.html', 'https://www.doradolist.com/cns.html', 'https://www.doradolist.com/coding.html',...
+
 
 # print(BOOK_PAGE)
 # print(len(BOOK_PAGE)) ['https://www.doradolist.com/stanford-algorithms.html', 'https://www.doradolist.com/stanford-antenna.html', ...
