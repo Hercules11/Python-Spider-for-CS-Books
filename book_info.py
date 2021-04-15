@@ -1,3 +1,5 @@
+# 抓取页面内的书籍信息，包括书名、亚马逊购买链接、图片链接、分类
+
 import sqlite3
 import requests
 from bs4 import BeautifulSoup

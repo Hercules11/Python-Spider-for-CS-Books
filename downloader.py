@@ -33,6 +33,7 @@ for word in words:
     if search_word not in book_needed:
         book_needed.append(search_word)
 
+# 打印去重，格式化后的书籍名称
 print(book_needed)
 print("total: ", len(book_needed))
 conn.close()

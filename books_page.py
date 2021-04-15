@@ -1,3 +1,5 @@
+# 抓取包含书籍信息的，并且满足过滤条件的页面链接
+
 import requests
 from bs4 import BeautifulSoup
 import sqlite3
