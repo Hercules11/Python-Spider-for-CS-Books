@@ -1,6 +1,6 @@
 #### 爬取 名校计算机课程 推荐教材，以及领域内 专家推荐 书籍
 
-网站：
+网站：https://www.doradolist.com/main.html
 
 **整个项目的流程**：
 
@@ -26,4 +26,4 @@
 
 完整榜单，[complete_list.md](https://github.com/Hercules11/Python-Spider-for-CS-Books/blob/master/complete_list.md)
 
-注： `*.db` 可用`DB Browser for SQLite` 打开； 爬取的书籍仅涉及部分领域；网络不太稳定， `python table.py` 运行了五六次才把图片资源下载好
+注： `*.db` 可用`DB Browser for SQLite` 打开；爬取的书籍仅涉及部分领域；网络不太稳定， `python table.py` 运行了五六次才把图片资源下载好；
